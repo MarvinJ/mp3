@@ -15,18 +15,18 @@
 
     <!-- DELETE following div and UNCOMMENT the previous one -->
     <div class="row text-center">
-        <h1>Welcome to MP3!</h1>
-        <img src="http://lorempixel.com/400/200/cats"/>
-        <p> The installation and setup worked out for you. That is commendable.
-            To reward you for your efforts, here is a picture of a cat. However,
-            this is not the page you want. To get started on using your partials,
-            delete this particular div and, instead, uncomment the div given
-            in your index.html and implement your Angular routes in source_js/app.js .
-        </p>
+        <li class="menu-text">
+            <a href="#/list">Search</a>
+        </li>
+        <li class="menu-text">
+            <a href="#/gallery">Gallery</a>
+        </li>
+        <div ng-view></div>
     </div>
 
     <!-- Angular Scripts -->
     <!-- NOTE: removing the ".min." can help debugging in the console-->
+
     <script src="./lib/angular/angular.min.js"></script>
     <script src="./lib/angular-route/angular-route.min.js"></script>
     <script src="./js/app.js"></script>

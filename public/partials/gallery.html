@@ -1,0 +1,28 @@
+<div>
+    <h1>IMDB Top 250 Movie Directory</h1>
+    <p></p>
+    <span>
+        <div class="row">
+            <div class="large-8">
+                <div ng-repeat="genre in genres">
+                    <button ng-click="myFunc(genre)">{{genre}}</button>
+
+                </div>
+                <div ng-repeat="movie in current_movie">
+                    <div class="row">
+                        <div class="large-3 columns">
+                            <a ng-href="#/details/{{movie.rank}}" ><img ng-src={{"../data/images/".concat(movie.imdbid).concat(".jpg")}}>
+                            </a>
+                                    <!--description for the website -->
+                        <div class="large-3 columns">
+                            <span>{{movie.title}}</span>
+                            <span>{{movie.rank}}</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </span>
+</div>
