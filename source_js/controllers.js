@@ -8,7 +8,7 @@
 app.controller('MainController', ['$scope', '$http', function($scope, $http) {
     // read json file and assign it to the json
     $scope.reverse = false;
-    $http.get('../data/imdb250.json')
+    $http.get('./data/imdb250.json')
         .success(function(response) {
             // response is an json array here
             $scope.movies = [];
@@ -31,7 +31,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 
 app.controller('GalleryController', ['$scope', '$http', function($scope, $http) {
     // read json file and assign it to the json
-    $http.get('../data/imdb250.json')
+    $http.get('./data/imdb250.json')
         .success(function(response) {
             // response is an json array here
             $scope.movies = [];
@@ -76,7 +76,7 @@ app.controller('DetailsController', ['$scope', '$http','$routeParams', function(
     // read json file and assign it to the json
     console.log("detail is qi");
     $scope.temp = "hello";
-    $http.get('../data/imdb250.json')
+    $http.get('./data/imdb250.json')
         .success(function(response) {
             // response is an json array here
             $scope.movies = [];
