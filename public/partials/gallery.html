@@ -11,7 +11,7 @@
                 <div ng-repeat="movie in current_movie">
                     <div class="row">
                         <div class="large-3 columns">
-                            <a ng-href="#/details/{{movie.rank}}" ><img ng-src={{"../data/images/".concat(movie.imdbid).concat(".jpg")}}>
+                            <a ng-href="#/details/{{movie.rank}}" ><img ng-src="./data/images/{{movie.imdbid}}.jpg">
                             </a>
                                     <!--description for the website -->
                         <div class="large-3 columns">
