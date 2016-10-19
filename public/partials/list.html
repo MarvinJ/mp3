@@ -1,39 +1,41 @@
 
 <div >
     <h1>IMDB Top 250 Movie Directory</h1>
-
-    <label>Search: <input ng-model="searchText"></label>
-    <span>{{movies.length}}</span>
-    <!-- dropdown selections here -->
-    <select ng-model="ranks" ng-options="option for option in
-    options">
-    </select>
-    <form name="myForm">
-        <div class="row">
-            <div class="large-2 columns">
-                <label>
-                    <input type="radio" ng-model="reverse" ng-value="false">
-                    ascending
-                </label>
+    <div class="row align-center">
+        <label class="small-8 columns">Search: <input ng-model="searchText"></label>
+        <!-- dropdown selections here -->
+        <select ng-model="ranks" ng-options="option for option in
+        options" class="small-8 columns">
+        </select>
+        <form name="myForm" class="small-8 columns">
+            <div class="row">
+                <div class="large-2 columns">
+                    <label>
+                        <input type="radio" ng-model="reverse" ng-value="false">
+                        ascending
+                    </label>
+                </div>
+                <div class="large-2 columns">
+                    <label>
+                        <input type="radio" ng-model="reverse" ng-value="true">
+                        descending
+                    </label>
+                </div>
             </div>
-            <div class="large-2 columns">
-                <label>
-                    <input type="radio" ng-model="reverse" ng-value="true">
-                    descending
-                </label>
-            </div>
-        </div>
-    </form>
-    <div ng-repeat="movie in movies | filter:searchText | orderBy :ranks:reverse " >
-        <div class="row">
-            <div class="large-3 columns">
-                <a ng-href="#/details/{{movie.rank}}" ><img ng-src="./data/images/{{movie.imdbid}}.jpg">
-                </a>
-            </div>
-            <!--description for the website -->
-            <div class="large-3 columns">
-                <span>{{movie.title}}</span>
-                <span>{{movie.rank}}</span>
+        </form>
+    </div>
+    <div class="row align-center pad">
+        <div ng-repeat="movie in movies | filter:searchText | orderBy :ranks:reverse " class="small-8 columns">
+            <div class="row ">
+                <div class="small-4 columns">
+                    <a ng-href="#/details/{{movie.rank}}" ><img ng-src="./data/images/{{movie.imdbid}}.jpg">
+                    </a>
+                </div>
+                <!--description for the website -->
+                <div class="small-8 columns">
+                    <span>{{movie.title}}</span>
+                    <span>{{movie.rank}}</span>
+                </div>
             </div>
         </div>
     </div>

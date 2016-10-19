@@ -1,36 +1,31 @@
-
 <div>
-    <div class = "row">
-        <div class="large-6">
+    <div class="row align-center">
+        <div class="small-6">
             <a ng-href="#/details/{{rank==1?250:rank-1 }}">prev</a>
             <a ng-href="#/details/{{rank==250?1: rank+1 }}">next</a>
 
 
         </div>
     </div>
-    <div class="row">
-        <div class="large-3">
-            {{curr_movie.title}};
-        </div>
-    </div>
-    <div class="row">
-        <div class="large-3">
-            Rank: {{curr_movie.rank}};
-        </div>
-    </div>
-    <div class="row">
-        <div class="large-4">
-            <img ng-src="./data/images/{{curr_movie.imdbid}}.jpg">
-        </div>
+    <div class="row align-center">
+        <div class ="small-8 columns">
+            <div class="row">
+                <div class="large-4 columnsß" >
+                    <img ng-src="./data/images/{{curr_movie.imdbid}}.jpg">
+                </div>
 
-        <div class="large-8">ßß
-            <p>
-                {{curr_movie.plot}}
-            </p>
-            <span>release: {{curr_movie.released}}</span>
-            <span>Runtime: {{curr_movie.runtime}}</span>
-            <span>Awards: {{curr_movie.awards}}</span>
+                <div class="large-8 columnsß">
+                    <p>
+                        {{curr_movie.plot}}
+                    </p>
+                    <span>{{curr_movie.title}}</span><br>
+                    <span>{{curr_movie.rank}}</span><br>
+                    <span>release: {{curr_movie.released}}</span><br>
+                    <span>Runtime: {{curr_movie.runtime}}</span><br>
+                    <span>Awards: {{curr_movie.awards}}</span><br>
+
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
